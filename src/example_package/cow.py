@@ -8,6 +8,7 @@ import cowsay
 def say(message: str) -> None:
     """
     Display a cow saying the given message.
+    It's pretty awesome.
 
     Args:
         message: str
