@@ -1,0 +1,34 @@
+name: publish docs
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Setup for poetry
+        run: pip install poetry
+      - name: poetry deps
+        run: poetry install
+      - name: Build documentation
+        run: |
+          mkdir pages
+          touch pages/.nojekyll
+          cd docs
+          poetry run sphinx-build -b html source build
+          cp -r build/* ../pages/
+      - name: Deploy documentation
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: pages
+          folder: pages
