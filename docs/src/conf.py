@@ -33,10 +33,12 @@ extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.napoleon",
     "sphinx.ext.viewcode",
+    "sphinx_multiversion",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
+
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -73,3 +75,25 @@ autodoc_preserve_defaults = True
 # enable anchor creation
 myst_heading_anchors = 3
 
+# sphinx-multiversion configuration
+smv_tag_whitelist = r"^v\d+\.\d+\.\d+$"
+# Pattern for released versions
+smv_released_pattern = r"^tags/.*$"
+# Format for versioned output directories inside the build directory
+smv_outputdir_format = "{ref.name}"
+
+# Whitelist pattern for branches (set to None to ignore all branches)
+smv_branch_whitelist = "main"
+
+# Whitelist pattern for remotes (set to None to use local branches only)
+smv_remote_whitelist = None
+
+html_sidebars = {
+    "**": [
+        "about.html",
+        'searchfield.html',
+        "navigation.html",
+        "relations.html",
+        "versioning.html",
+    ],
+}
