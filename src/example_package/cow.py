@@ -19,3 +19,12 @@ def say(message: str) -> None:
     """
 
     cowsay.cow(message)
+
+def move() -> None:
+    """
+    Print a statement about the cow moving.
+
+    Returns:
+        None
+    """
+    print("The cow moved.")
