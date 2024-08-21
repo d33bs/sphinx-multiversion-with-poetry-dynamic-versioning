@@ -89,7 +89,7 @@ myst_heading_anchors = 3
 smv_tag_whitelist = r"^v\d+\.\d+\.\d+$"
 
 # Pattern for released versions
-smv_released_pattern = r"^tags/.*$"
+smv_released_pattern = r"^tags/v\d+\.\d+\.\d+$"
 
 # Format for versioned output directories inside the build directory
 smv_outputdir_format = "{ref.name}"
