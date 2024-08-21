@@ -11,10 +11,11 @@
   </a>
 </p>
 {% else %}
+<h1 class="logo"><a href="{{ pathto(master_doc) }}">{{ project }}</a></h1>
 {% if current_version.name != 'main' %}
-<h1 class="logo"><a href="{{ pathto(master_doc) }}">{{ project }} {{ current_version.name }}</a></h1>
+<h3>{{ current_version.name }}</h3>
 {% else %}
-<h1 class="logo"><a href="{{ pathto(master_doc) }}">{{ project }} (latest)</a></h1>
+<h3>(latest)</h3>
 {% endif %}
 {% endif %}
 

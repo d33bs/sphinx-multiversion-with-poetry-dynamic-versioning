@@ -12,6 +12,8 @@
     {% endif %}
   </strong>
 </p>
+{% else %}
+The latest version is {{ latest_version.name }}, the current version is {{ current_version.name }}.
 {% endif %}
 {{ super() }}
 {% endblock %}%
