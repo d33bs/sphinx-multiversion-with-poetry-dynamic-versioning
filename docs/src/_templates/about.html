@@ -11,7 +11,11 @@
   </a>
 </p>
 {% else %}
+{% if current_version.name != 'main' %}
 <h1 class="logo"><a href="{{ pathto(master_doc) }}">{{ project }} {{ current_version.name }}</a></h1>
+{% else %}
+<h1 class="logo"><a href="{{ pathto(master_doc) }}">{{ project }} (latest)</a></h1>
+{% endif %}
 {% endif %}
 
 {% if theme_description %}

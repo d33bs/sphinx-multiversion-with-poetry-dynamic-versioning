@@ -27,6 +27,9 @@ jobs:
           cd docs
           poetry run sphinx-multiversion src build
           cp -r build/* ../pages/
+      - name: Add index redirector to latest docs
+        run: |
+          cp redirector.html ../pages/index.html
       - name: Deploy documentation
         uses: JamesIves/github-pages-deploy-action@v4
         with:
