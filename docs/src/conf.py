@@ -85,7 +85,6 @@ autodoc_preserve_defaults = True
 myst_heading_anchors = 3
 
 # sphinx-multiversion configuration
-
 # only include tags which match semver standards (e.g. v0.0.0)
 smv_tag_whitelist = r"^v\d+\.\d+\.\d+$"
 
