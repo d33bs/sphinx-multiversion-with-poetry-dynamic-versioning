@@ -25,7 +25,7 @@ jobs:
           mkdir pages
           touch pages/.nojekyll
           cd docs
-          poetry run sphinx-build -b html source build
+          poetry run sphinx-multiversion -b html src build
           cp -r build/* ../pages/
       - name: Deploy documentation
         uses: JamesIves/github-pages-deploy-action@v4
