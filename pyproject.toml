@@ -14,7 +14,7 @@ cowsay = "^6.1"
 [tool.poetry.group.docs.dependencies]
 sphinx = "^8.0.2"
 myst-parser = "^4.0.0"
-sphinx-multiversion = "^0.2.4"
+sphinx-multiversion = { git = "https://github.com/J-RN/sphinx-multiversion", rev = "a77f0c862dace3a62c18fc866da60ef7dde3873d" }
 dunamai = "^1.22.0"
 
 [tool.poetry-dynamic-versioning]

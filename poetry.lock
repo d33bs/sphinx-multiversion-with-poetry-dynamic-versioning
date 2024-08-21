@@ -528,13 +528,17 @@ version = "0.2.4"
 description = "Add support for multiple versions to sphinx"
 optional = false
 python-versions = "*"
-files = [
-    {file = "sphinx-multiversion-0.2.4.tar.gz", hash = "sha256:5cd1ca9ecb5eed63cb8d6ce5e9c438ca13af4fa98e7eb6f376be541dd4990bcb"},
-    {file = "sphinx_multiversion-0.2.4-py3-none-any.whl", hash = "sha256:dec29f2a5890ad68157a790112edc0eb63140e70f9df0a363743c6258fbeb478"},
-]
+files = []
+develop = false
 
 [package.dependencies]
 sphinx = ">=2.1"
+
+[package.source]
+type = "git"
+url = "https://github.com/J-RN/sphinx-multiversion"
+reference = "a77f0c862dace3a62c18fc866da60ef7dde3873d"
+resolved_reference = "a77f0c862dace3a62c18fc866da60ef7dde3873d"
 
 [[package]]
 name = "sphinxcontrib-applehelp"
@@ -650,4 +654,4 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "4dd86005651bf251ded9cf454f42afcbe0228d8510ed23d8a0447a966f05f76d"
+content-hash = "7cc2f3da2c5f831a7694f8f7ca0476b157712b6169d9cca3443bee190523e3dc"

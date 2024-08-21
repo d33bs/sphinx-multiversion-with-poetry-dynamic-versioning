@@ -79,6 +79,7 @@ html_theme_options = {
     "github_count": "false",
 }
 
+
 # set option to avoid rendering default variables
 autodoc_preserve_defaults = True
 
