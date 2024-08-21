@@ -1,7 +1,8 @@
 {% extends "!page.html" %}
 {% block body %}
 {% if current_version and latest_version and current_version != latest_version %}
-<p>
+
+<p style="background:#E7C3EB;padding:5px 10px;">
   <strong>
     {% if current_version.name != 'main' %}
     You're reading an old version of this documentation.
@@ -12,8 +13,7 @@
     {% endif %}
   </strong>
 </p>
-{% else %}
-The latest version is {{ latest_version.name }}, the current version is {{ current_version.name }}.
+</span>
 {% endif %}
 {{ super() }}
 {% endblock %}%

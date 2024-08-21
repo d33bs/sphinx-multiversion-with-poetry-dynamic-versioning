@@ -12,6 +12,7 @@
 #
 import pathlib
 import sys
+from dunamai import Version
 
 basedir = str(pathlib.Path(__file__).parent.parent.parent.resolve())
 
@@ -85,6 +86,9 @@ autodoc_preserve_defaults = True
 myst_heading_anchors = 3
 
 # sphinx-multiversion configuration
+# latest version reference
+smv_latest_version = f"v{Version.from_git().base}"
+
 # only include tags which match semver standards (e.g. v0.0.0)
 smv_tag_whitelist = r"^v\d+\.\d+\.\d+$"
 
