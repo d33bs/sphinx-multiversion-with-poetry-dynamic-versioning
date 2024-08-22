@@ -148,16 +148,14 @@ function redirectToPage() {
     // Get the current page URL
     var currentUrl = window.location.href;
 
-    // Handle URLs with and without "index.html"
-    var currentUrlNoIndex = currentUrl.replace(/index\.html$/, "");
-
     // Loop through all options in the dropdown
     for (var i = 0; i < selectElement.options.length; i++) {
         var option = selectElement.options[i];
-        var optionUrl = option.value;
+        // gather optionUrl without .. and without index.html
+        var optionUrl = option.value.replace("..","").replace(/\/index\.html$/, "");
 
         // If the current URL contains the option's value (URL), select that option
-        if (currentUrl.includes(optionUrl) || currentUrlNoIndex.includes(optionUrl)) {
+        if (currentUrl.includes(optionUrl)) {
             selectElement.selectedIndex = i;  // Set the selected index to the matching option
             break;  // Exit the loop after finding the match
         }
