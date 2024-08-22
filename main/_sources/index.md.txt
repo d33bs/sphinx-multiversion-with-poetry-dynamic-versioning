@@ -12,5 +12,6 @@ relative-images:
 caption: 'Contents:'
 maxdepth: 3
 ---
+notebooks
 python-api
 ```
