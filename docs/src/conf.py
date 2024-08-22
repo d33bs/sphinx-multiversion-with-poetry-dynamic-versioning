@@ -35,6 +35,7 @@ extensions = [
     "sphinx.ext.napoleon",
     "sphinx.ext.viewcode",
     "sphinx_multiversion",
+    'myst_nb',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -79,6 +80,8 @@ html_theme_options = {
     "github_count": "false",
 }
 
+# Options for myst-nb
+nb_execution_mode = "auto"
 
 # set option to avoid rendering default variables
 autodoc_preserve_defaults = True
