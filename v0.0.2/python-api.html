@@ -155,8 +155,8 @@ function redirectToPage() {
  * Sets the default selection of the dropdown menu based on the current URL.
  * 
  * This function checks the current page URL and compares it with the values (URLs) of the 
- * options in the dropdown menu. If a match is found, the corresponding option is selected
- * as the default. It accounts for both the URL with "index.html" and without it.
+ * options in the dropdown menu. If the current URL contains "index.html" and matches an 
+ * option's value, that option is selected as the default.
  * This function runs automatically when the page loads.
  */
  function setDefaultSelection() {
@@ -168,11 +168,10 @@ function redirectToPage() {
     // Loop through all options in the dropdown
     for (var i = 0; i < selectElement.options.length; i++) {
         var option = selectElement.options[i];
-        // gather optionUrl without .. and without index.html
-        var optionUrl = option.value.replace("..","").replace(/\/index\.html$/, "");
+        var optionUrl = option.value;
 
-        // If the current URL contains the option's value (URL), select that option
-        if (currentUrl.includes(optionUrl)) {
+        // If the current URL includes "index.html" and matches the option's value, select that option
+        if (optionUrl == "index.html") {
             selectElement.selectedIndex = i;  // Set the selected index to the matching option
             break;  // Exit the loop after finding the match
         }
@@ -181,6 +180,7 @@ function redirectToPage() {
 
 // Automatically call setDefaultSelection() when the page finishes loading
 window.onload = setDefaultSelection;
+
 </script>
 
         </div>
