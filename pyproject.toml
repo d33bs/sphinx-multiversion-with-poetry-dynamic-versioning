@@ -12,8 +12,8 @@ python = "^3.11"
 cowsay = "^6.1"
 
 [tool.poetry.group.docs.dependencies]
-sphinx = "^8.0.2"
-myst-parser = "^4.0.0"
+sphinx = "^7.0.0"
+myst-parser = "^3.0.0"
 sphinx-multiversion = { git = "https://github.com/J-RN/sphinx-multiversion", rev = "a77f0c862dace3a62c18fc866da60ef7dde3873d" } # use nonstandard sphinx-multiversion to fix git-based challenges with default branch handling
 dunamai = "^1.22.0"
 myst-nb = "^1.1.1"
